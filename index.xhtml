@@ -458,9 +458,10 @@ functionality specific to firefox. -->
   #searchField {
     -moz-appearance: searchfield;
     display: block;
-    width: 90%;
+    width: 80%;
     font-size: 16px;
-    padding-left: 7px;
+    padding: 4px 0 4px 16px;
+    margin-top: 3px;
     transform: translate(-3px, 0);
   }
 
@@ -474,6 +475,21 @@ functionality specific to firefox. -->
 
   #searchBar label {
     font-size: 80%;
+  }
+
+  #searchButton {
+    position: absolute;
+    z-index: 10;
+    right: 10%;
+    top: 2px;
+    color: #fff;
+    background-color: #0095DD;
+    border: 1px solid #006ca0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    opacity: 1 !important;
+    font-size: 14px;
+    padding: 4px 8px 5px 8px;
   }
 </style>
   </head>
@@ -502,9 +518,16 @@ functionality specific to firefox. -->
 <div id="searchBar">
 <label>
   <span>Search for this page instead</span>
-  <input id="searchField" type="text" value="ww mozla cmo" autofocus="true" />
+  <div style="position: relative">
+    <input id="searchField" type="text" value="ww mozla cmo" autofocus="true" />
+    <span id="searchButton">Search</span>
+  </div>
 </label>
 </div>
+<script type="text/javascript">
+  var searchField = document.getElementById('searchField');
+  searchField.setSelectionRange(0, searchField.value.length);
+</script>
 
         <!-- Long Description (Note: See netError.dtd for used XHTML tags) -->
         <div id="errorLongDesc">
