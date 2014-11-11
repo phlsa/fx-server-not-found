@@ -495,17 +495,31 @@ functionality specific to firefox. -->
 
   #autoCorrectDesc {
     font-style: italic;
+    margin-top: 5px;
   }
 
   a {
     font-size: inherit;
   }
 
-  #errorLongDesc {
-    margin-top: 20px
+  #errorLongContent {
+    margin-bottom: -70px;
   }
+
+  #errorLongDesc {
+    margin-top: -25px;
+    padding-right: 55px;
+    text-align: right;
+  }
+
+  #errorLongDesc ul {
+    text-align: left;
+    max-width: 500px;
+    margin-top: 20px;
+  }
+
   #errorPageContainer {
-    min-width: 60%;
+    min-width: 45%;
   }
   #moreInformation {
     position: absolute;
@@ -515,7 +529,7 @@ functionality specific to firefox. -->
   }
 
   #errorTryAgain {
-    display: none;
+    /*display: none;*/
   }
 
   #errorTitleText {
@@ -540,7 +554,7 @@ functionality specific to firefox. -->
 
       <!-- Error Title -->
       <div id="errorTitle">
-        <h1 id="errorTitleText">Server not found</h1>
+        <h1 id="errorTitleText">Website not found</h1>
       </div>
 
       <!-- LONG CONTENT (the section most likely to require scrolling) -->
